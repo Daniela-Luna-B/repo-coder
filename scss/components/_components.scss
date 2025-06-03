@@ -1,0 +1,120 @@
+@use '../utils/variables' as variables;
+@use '../utils/mixins' as mixins;
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: variables.$primary-color;
+}
+
+p {
+  font-size: 1.1rem;
+  color: variables.$text-muted;
+  margin-bottom: 1rem;
+}
+
+.nav-link:hover {
+  color: variables.$primary-color;
+}
+
+.navbar-toggler {
+  border-color: variables.$primary-color;
+}
+
+.navbar-toggler-icon {
+  background-color: variables.$primary-color;
+}
+
+.btn-primary {
+  background-color: variables.$primary-color;
+  border: none;
+  color: variables.$header-bg;
+  padding: 0.8rem 1.6rem;
+  font-weight: bold;
+  @include mixins.transition(background-color 0.3s ease, transform 0.2s ease);
+
+  &:hover {
+    background-color: variables.$hover-color;
+    transform: scale(1.05);
+  }
+}
+
+.form-control {
+  background-color: #222;
+  border: 1px solid #444;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 6px;
+  @include mixins.transition(border-color 0.3s ease);
+
+  &:focus {
+    border-color: variables.$primary-color;
+    outline: none;
+  }
+}
+
+.logo img {
+  height: 70px;
+  width: auto;
+  @include mixins.transition(transform 0.3s);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.video-section video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bg-light {
+  background-color: variables.$gray-dark !important;
+  color: variables.$text-light;
+}
+
+.bg-light .btn-primary {
+  background-color: variables.$primary-color;
+  color: black;
+
+  &:hover {
+    background-color: variables.$hover-color;
+  }
+}
+
+.btn-outline-primary {
+  color: variables.$primary-color;
+  border-color: variables.$primary-color;
+
+  &:hover {
+    background-color: variables.$primary-color;
+    color: black;
+  }
+}
+
+.btn-outline-success {
+  color: variables.$whatsapp-green;
+  border-color: variables.$whatsapp-green;
+
+  &:hover {
+    background-color: variables.$whatsapp-green;
+    color: black;
+  }
+}
+
+.btn-outline-danger {
+  color: variables.$instagram-pink;
+  border-color: variables.$instagram-pink;
+
+  &:hover {
+    background-color: variables.$instagram-pink;
+    color: black;
+  }
+}
+h1, h2 {
+  @include mixins.fade-in(1s, 0s);
+}
+
+p.lead {
+  @include mixins.fade-in(1s, 0.3s);
+}

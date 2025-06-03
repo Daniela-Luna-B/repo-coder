@@ -1,2 +1,16 @@
 # Ignorar
 /img/bienvenidos.jpg
+
+# Ignorar mapa de estilos generado por SASS
+css/styles.css.map
+
+# Archivos temporales y del sistema
+.DS_Store
+Thumbs.db
+
+# Caché del compilador y logs
+.sass-cache/
+*.log
+
+# Dependencias (por si se usan en el futuro)
+node_modules/

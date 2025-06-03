@@ -1,0 +1,18 @@
+@use '../utils/variables' as variables;
+
+header, footer {
+  background-color: variables.$header-bg;
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
